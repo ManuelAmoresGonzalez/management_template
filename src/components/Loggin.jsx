@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, Link, useHistory } from "react-router-dom";
 import { auth, logInWithEmailAndPassword, signInWithEmailAndPassword } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import swal from "sweetalert";
+import swal from "sweetalert2";
 
 
 
@@ -23,8 +23,23 @@ const Loggin = () => {
         <form className='' onSubmit={ (event) => {   
               event.preventDefault();           
               logInWithEmailAndPassword( email, password).then(v => {
-                console.log(v);
-                const valor = v ? navigate('/admin') : navigate('/');
+                if(v){
+                  swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: '',
+                    showConfirmButton: false,
+                    timer: 1000
+                  })
+                  navigate('/admin')
+                }else{
+                  swal.fire(
+                    'Intentalo nuevamente',
+                    '',
+                    'warning'
+                  )
+                }
+                
               })} }>
           <div className="row">
             <div className="input-field ">
