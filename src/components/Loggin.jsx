@@ -13,14 +13,6 @@ const Loggin = () => {
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log(user)
-    if (user){
-      navigate("/register");
-    }else{
-      navigate("/");
-    }    
-  }, [user]);
 
 
   return (
@@ -28,7 +20,12 @@ const Loggin = () => {
       <h3>Inicio de sesión</h3>
       <hr />
       <div className='row container'>
-        <form className=''>
+        <form className='' onSubmit={ (event) => {   
+              event.preventDefault();           
+              logInWithEmailAndPassword( email, password).then(v => {
+                console.log(v);
+                const valor = v ? navigate('/admin') : navigate('/');
+              })} }>
           <div className="row">
             <div className="input-field ">
               <i className="material-icons prefix ">email</i>
@@ -52,10 +49,7 @@ const Loggin = () => {
             </div>
 
           </div>
-          { <button className='waves-effect waves-light btn' type='submit' onClick={ () => {
-              
-              logInWithEmailAndPassword( email, password)         
-              }}>Enviar</button> }
+          { <button className='waves-effect waves-light btn' type='submit' >Enviar</button> }
 
           <hr />
         </form>
@@ -67,3 +61,5 @@ const Loggin = () => {
 }
 
 export default Loggin
+
+
