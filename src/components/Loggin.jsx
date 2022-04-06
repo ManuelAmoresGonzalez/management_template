@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, Link, useHistory } from "react-router-dom";
-import { auth, logInWithEmailAndPassword, signInWithEmailAndPassword } from "../firebase";
+import React, { useState } from "react";
+import { useNavigate} from "react-router-dom";
+import { auth, logInWithEmailAndPassword} from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import swal from "sweetalert2";
 
@@ -9,7 +9,6 @@ import swal from "sweetalert2";
 const Loggin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [shouldShowLogin, setShouldShowLogin] = useState(false);
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
 
@@ -40,7 +39,7 @@ const Loggin = () => {
                   )
                 }
                 
-              })} }>
+              })}}>
           <div className="row">
             <div className="input-field ">
               <i className="material-icons prefix ">email</i>
