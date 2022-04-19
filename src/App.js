@@ -7,12 +7,13 @@ import CreateCategory from './components/CreateCarrousel';
 import CreateLogo from './components/CreateLogo';
 import CreateProduct from './components/CreateProduct';
 import ProductsView from './components/ProductsView';
+import { Crud } from './crudFirebase';
 import {  Route, Routes, useNavigate } from "react-router-dom";
 
 function App() {
   return (
-    <div className="app">
-      
+    <div className="app">    
+      {/* <Crud/> */}
         <Routes>
           <Route exact path="/" element={<Loggin />} />
           <Route exact path="/register" element={<Register />} />
@@ -22,8 +23,7 @@ function App() {
           <Route exact path="/createlogo" element={<CreateLogo /> } />
           <Route exact path="/createproduct" element={<CreateProduct /> } />
           <Route exact path="/productsview" element={<ProductsView /> } />
-        </Routes>
-      
+        </Routes>      
     </div>
   );
 } 

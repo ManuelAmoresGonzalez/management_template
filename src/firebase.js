@@ -15,6 +15,8 @@ import {getFirestore,
         where,
         addDoc} from "firebase/firestore";
 
+import { getDatabase } from "firebase/database";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBiX3FZnP9n3aOUzM2ISG8GpoFAqbjjKXE",
   authDomain: "datosplantilla-46cf4.firebaseapp.com",
@@ -39,6 +41,10 @@ const logInWithEmailAndPassword = async (email, password) => {
     return false;
   }
 };
+
+function StartFirebase(){
+  return getDatabase(app);
+}
 
 const registerWithEmailAndPassword = async ( name, email, password) => {
   try {
@@ -75,7 +81,8 @@ export {
   signInWithEmailAndPassword,
   registerWithEmailAndPassword,
   sendPasswordReset,
-  logout,
+  logout,  
+  StartFirebase
 };
 
 

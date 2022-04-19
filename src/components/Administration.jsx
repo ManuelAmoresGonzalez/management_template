@@ -1,38 +1,24 @@
 import React from 'react'
 import { useNavigate} from "react-router-dom";
 import axios from 'axios';
-import { getDatabase, ref, set } from "firebase/database";
 
 const Administration = () => {
   const navigate = useNavigate();
-  // fetch('https://datosplantilla-46cf4-default-rtdb.firebaseio.com/.json')
-  // .then(response => response.json())
-  // .then(data => console.log(data));
-  const peticion = async () => {
-    const { data } = await axios.get(
-      "https://datosplantilla-46cf4-default-rtdb.firebaseio.com/.json"
-    );
+
+  //Get datos de la base de datos firebase
+  // const peticion = async () => {
+  //   const { data } = await axios.get(
+  //     "https://datosplantilla-46cf4-default-rtdb.firebaseio.com/.json"
+  //   );
   
-    return data;
-  };  
-  const data = peticion().then(console.log);
-
-  
-
-  function writeUserData() {
-    const db = getDatabase();
-    set(ref(db, 'carros/persona'), {
-      'ssff': "ds"
-    });
-  }
-  
-
-
+  //   return data;
+  // };  
+  // const data = peticion().then(console.log);
 
   return (
     <div className='bg-secondary row' >      
 
-      <button className="btn waves-effect waves-light col s12 m4 l2" type="submit" name="action" onClick={() => writeUserData()}> Crear Producto
+      <button className="btn waves-effect waves-light col s12 m4 l2" type="submit" name="action" /*onClick={() => peticion()}*/> Crear Producto
         <i class="material-icons right">assessment</i>
       </button>
 
