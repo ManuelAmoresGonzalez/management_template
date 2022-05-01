@@ -3,12 +3,11 @@ import Loggin from './components/Loggin';
 import Register from './components/Register';
 import Administration from './components/Administration';
 import CreateCarrousel from './components/CreateCarrousel';
-import CreateCategory from './components/CreateCarrousel';
+import CreateCategory from './components/CreateCategory';
 import CreateLogo from './components/CreateLogo';
-import CreateProduct from './components/CreateProduct';
 import ProductsView from './components/ProductsView';
-import { Crud } from './crudFirebase';
 import {  Route, Routes, useNavigate } from "react-router-dom";
+import { CreateProduct } from './components/CreateProduct';
 
 function App() {
   return (

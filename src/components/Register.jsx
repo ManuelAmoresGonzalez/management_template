@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { auth, registerWithEmailAndPassword} from '../firebase'
-// import {
-//   auth,
-//   registerWithEmailAndPassword,
-//   signInWithGoogle,
-// } from "../firebase";
+import { registerWithEmailAndPassword} from '../firebase'
+
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -14,14 +10,14 @@ const Register = () => {
   const navigate = useNavigate();
   
   return (
-    <div className='container'>
-      <h3>Registro de usuarios</h3>
+    <div className='container render'>
+      <h5>Registro de usuarios</h5>
       <hr />
       <div className='row container'>
         <form className=''>
           <div className="row">
           <div className="input-field ">
-              <i className="material-icons prefix ">person_pin </i>
+              <i className="material-icons prefix "> </i>
               <input id="icon_prefix "
                      type="text"
                      className="validate"
@@ -31,7 +27,7 @@ const Register = () => {
               <label for="icon_prefix">Nombre completo</label>
             </div>
             <div className="input-field ">
-              <i className="material-icons prefix ">email</i>
+              <i className="material-icons prefix "></i>
               <input id="icon_prefix "
                      type="text"
                      className="validate"
@@ -41,7 +37,7 @@ const Register = () => {
               <label for="icon_prefix">Email</label>
             </div>
             <div className="input-field col-md-12">
-              <i className="material-icons prefix">vpn_key</i>
+              <i className="material-icons prefix"></i>
               <input id="icon_telephone"
                      type="text"
                      className="validate"

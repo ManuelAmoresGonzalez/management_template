@@ -59,7 +59,7 @@ const registerWithEmailAndPassword = async ( name, email, password) => {
     });
   } catch (err) {
     console.error(err.message);
-    //alert(err.message);
+    alert("A ocurrido un error a la hora de registrarte");
   }
 };
 const sendPasswordReset = async (email) => {

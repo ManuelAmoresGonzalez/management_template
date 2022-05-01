@@ -1,8 +1,14 @@
 import React from 'react'
 
 const ProductsView = () => {
+  
+
   return (
-    <div>ProductsView</div>
+    <div>
+
+      <h5>Ver los productos</h5>
+
+    </div>
   )
 }
 
