@@ -49,7 +49,7 @@ const Loggin = () => {
                      value={email}
                      onChange={(e) => setEmail(e.target.value)}
               />
-              <label for="icon_prefix">Email</label>
+              <label htmlFor="icon_prefix">Email</label>
             </div>
             <div className="input-field col-md-12">
               <i className="material-icons prefix"></i>
@@ -59,7 +59,7 @@ const Loggin = () => {
                      value={password}
                      onChange={(e) => setPassword(e.target.value)}
               />
-              <label for="icon_telephone">Password</label>
+              <label htmlFor="icon_telephone">Password</label>
             </div>
 
           </div>
@@ -69,7 +69,7 @@ const Loggin = () => {
           <h6>Aún no te registras ?</h6>
           
         </form>
-        <a class="waves-effect waves-light btn amber accent-3 mt-4" onClick={() => navigate('/register')}>REGISTRARSE</a>
+        <a className="waves-effect waves-light btn amber accent-3 mt-4" onClick={() => navigate('/register')}>REGISTRARSE</a>
 
       </div>
 

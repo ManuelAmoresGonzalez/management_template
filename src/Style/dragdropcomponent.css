@@ -1,0 +1,36 @@
+.componentDragDrop{
+  width: 80%;
+  margin-left: 10%;
+}
+
+h3{
+    position: absolute;
+}
+
+ .file-upload-input {
+   z-index: 10;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+   outline: none;
+   opacity: 0;
+   cursor: pointer;
+   background: green;
+ }
+
+ .image-upload-wrap {
+   bottom: -10;
+   text-align: center;
+   height: 200px;
+   border: 8px dashed rgba(132, 230, 157, 0.918);
+   margin-left: 10px;
+   margin-right: 10px;
+   background: rgba(49, 46, 46, 0.253);
+ }
+
+ .moveTittle{
+   width: 50%;
+   margin-left: 15%;
+   margin-top: 4%;
+ }

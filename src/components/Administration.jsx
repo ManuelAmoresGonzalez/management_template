@@ -2,6 +2,8 @@ import React from 'react'
 import { useNavigate} from "react-router-dom";
 import '../Style/administration.css';
 import axios from 'axios';
+import { storage, auth } from '../firebase';
+import { getDatabase, ref, remove, set } from "firebase/database";
 
 const Administration = () => {
   const navigate = useNavigate();
@@ -16,25 +18,32 @@ const Administration = () => {
   // };  
   // const data = peticion().then(console.log);
 
+  function deleteData() {
+    const db = getDatabase();
+    remove(ref(db, 'categories/chanclas')) 
+  }  
+    
+  
+
   return (
     <div className='structure' >
       <h5>Configuración</h5>   
       <hr/>   
 
       <button className="btn waves-effect waves-light col s12 m4 l2 mt-5" type="submit" name="action" onClick={() => navigate('/productsview')}> Productos
-        <i class="material-icons right">assessment</i>
+        <i className="material-icons right">assessment</i>
       </button>
 
-      <button class="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/createcarrousel')}> Carrousel
-        <i class="material-icons right">burst_mode</i>
+      <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/createcarrousel')}> Carrousel
+        <i className="material-icons right">burst_mode</i>
       </button>
 
-      <button class="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/createlogo')}> Logo
-        <i class="material-icons right">folder_shared</i>
+      <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/createlogo')}> Logo
+        <i className="material-icons right">folder_shared</i>
       </button>
 
-      <button class="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/createcategory')}> Categoría
-        <i class="material-icons right">library_add</i>
+      <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/createcategory')}> Categoría
+        <i className="material-icons right">library_add</i>
       </button>
 
     </div>

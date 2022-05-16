@@ -1,23 +1,24 @@
 import {initializeApp} from "firebase/app";
-import {GoogleAuthProvider, 
-        getAuth, 
-        signInWithPopup,
+import firebase from "../node_modules/firebase/compat"; 
+import 'firebase/compat/firestore';
+
+import {getAuth, 
         signInWithEmailAndPassword,
         createUserWithEmailAndPassword,
         sendPasswordResetEmail,
         signOut,
+        
 } from "firebase/auth";
 
 import {getFirestore,
-        query,
-        getDocs,
         collection,
-        where,
         addDoc} from "firebase/firestore";
 
 import { getDatabase } from "firebase/database";
 
-const firebaseConfig = {
+
+const firebaseConfig = firebase.initializeApp(
+  {
   apiKey: "AIzaSyBiX3FZnP9n3aOUzM2ISG8GpoFAqbjjKXE",
   authDomain: "datosplantilla-46cf4.firebaseapp.com",
   projectId: "datosplantilla-46cf4",
@@ -25,12 +26,14 @@ const firebaseConfig = {
   messagingSenderId: "974112627032",
   appId: "1:974112627032:web:1d88416b4dba252d7f6d2d",
   measurementId: "G-6JWWKHJKYF"
-}
+  }
+)
 
         
-const app= initializeApp(firebaseConfig)
-const auth= getAuth(app)
-const db= getFirestore(app)
+
+const auth= firebaseConfig.auth();
+const db= firebaseConfig.firestore();
+const storage= firebaseConfig.storage();
 
 
 const logInWithEmailAndPassword = async (email, password) => {
@@ -43,14 +46,13 @@ const logInWithEmailAndPassword = async (email, password) => {
 };
 
 function StartFirebase(){
-  return getDatabase(app);
+  return getDatabase(firebaseConfig);
 }
 
 const registerWithEmailAndPassword = async ( name, email, password) => {
   try {
     const res = await createUserWithEmailAndPassword(auth, email, password);
     const user = res.user;
-    //console.log("Este es: ",email,password)
     await addDoc(collection(db, "users"), {
       uid: user.uid,
       name,
@@ -62,6 +64,7 @@ const registerWithEmailAndPassword = async ( name, email, password) => {
     alert("A ocurrido un error a la hora de registrarte");
   }
 };
+
 const sendPasswordReset = async (email) => {
   try {
     await sendPasswordResetEmail(auth, email);
@@ -74,6 +77,7 @@ const sendPasswordReset = async (email) => {
 const logout = () => {
   signOut(auth);
 };
+
 export {
   auth,
   db,
@@ -82,7 +86,9 @@ export {
   registerWithEmailAndPassword,
   sendPasswordReset,
   logout,  
-  StartFirebase
+  StartFirebase,
+  storage
+  
 };
 
 

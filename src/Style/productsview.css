@@ -1,0 +1,14 @@
+.boxview{
+    width: 80%;
+    margin-left: 10%;
+    background: green;
+}
+
+.boxtittle{
+    display: grid;
+    grid-template-columns: 85% 1fr
+}
+
+.tittle{
+    margin-left: 20%;
+}
