@@ -12,7 +12,7 @@ const ProductsView = () => {
     <div className='render'>
       <div className='boxtittle'>
       <h4 className='tittle'>Ver los productos</h4>
-      <a className="btn-floating btn-large waves-effect waves-light green" ><i class="material-icons" onClick={() => navigate('/createproduct')}>add</i></a>
+      <a className="btn-floating btn-large waves-effect waves-light green" ><i className="material-icons" onClick={() => navigate('/createproduct')}>add</i></a>
       </div>
       
       <div className='bg-secondary boxview'>

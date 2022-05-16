@@ -42,8 +42,12 @@ const CreateCarrousel = () => {
     set(ref(db, 'carrousel/'+name), {             
           url,
     })
-    .then(() => {alert('Agregado correctamente')})
-    .catch((error)=> {alert('A ocurrido el error: '+error)})
+    .then(() => {
+                  alert('Agregado correctamente')
+                })
+    .catch((error)=> {
+                        alert('A ocurrido el error: '+error)
+                      })
   }
 
   return (

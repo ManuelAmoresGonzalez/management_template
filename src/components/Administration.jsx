@@ -2,8 +2,12 @@ import React from 'react'
 import { useNavigate} from "react-router-dom";
 import '../Style/administration.css';
 import axios from 'axios';
-import { storage, auth } from '../firebase';
-import { getDatabase, ref, remove, set } from "firebase/database";
+import { storage, auth, logout} from '../firebase';
+import { deleteDataStorage } from '../firebaseStorage';
+import { deleteDataRealtime } from '../firebaseRealTime';
+
+
+
 
 const Administration = () => {
   const navigate = useNavigate();
@@ -11,26 +15,19 @@ const Administration = () => {
   //Get datos de la base de datos firebase
   // const peticion = async () => {
   //   const { data } = await axios.get(
-  //     "https://datosplantilla-46cf4-default-rtdb.firebaseio.com/.json"
+  //     "https://datosplantilla-46cf4-default-rtdb.firebaseio.com/carrousel.json"
   //   );
   
   //   return data;
   // };  
-  // const data = peticion().then(console.log);
-
-  function deleteData() {
-    const db = getDatabase();
-    remove(ref(db, 'categories/chanclas')) 
-  }  
-    
-  
+  // const data = peticion().then(console.log);  
 
   return (
     <div className='structure' >
       <h5>Configuración</h5>   
       <hr/>   
 
-      <button className="btn waves-effect waves-light col s12 m4 l2 mt-5" type="submit" name="action" onClick={() => navigate('/productsview')}> Productos
+      <button className="btn waves-effect waves-light col s12 m4 l2 mt-5" type="submit" name="action" onClick={() => deleteDataStorage()}> Productos
         <i className="material-icons right">assessment</i>
       </button>
 

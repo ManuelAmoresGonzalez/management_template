@@ -57,7 +57,7 @@ export const CreateProduct = () => {
   return (    
     <div className="render"> 
       <h5>Crear un producto</h5>      
-      <DragDropCOmponent funcion = {setUrl} name = {name} />      
+      <DragDropCOmponent funcion = {setUrl} name = {'products/'+name} />      
       <div className='row container'>
         <form className='' onSubmit={ (event) => {   
               event.preventDefault(); 

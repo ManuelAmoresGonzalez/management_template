@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { storage } from "../firebase";
 import '../Style/dragdropcomponent.css'
 
@@ -26,9 +25,6 @@ function DragDropCOmponent( { funcion, name } ) {
     })
   }
   
-  
-
-
   
   return (
     <div className="componentDragDrop">

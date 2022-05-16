@@ -25,7 +25,7 @@ const CreateCategory = () => {
     <div className="render">
       <h5>CreateCategory</h5>
       {console.log("El nombre_ "+name)}
-      <DragDropCOmponent funcion = {setUrl} name = {name}/>      
+      <DragDropCOmponent funcion = {setUrl} name = {'categorie/'+name}/>      
       <div className='row container'>
         <form className=''>
           

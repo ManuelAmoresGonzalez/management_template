@@ -11,8 +11,15 @@ const CreateLogo = () => {
     set(ref(db, 'logo'), {             
           url,
     })
-    .then(() => {alert('Agregado correctamente')})
-    .catch((error)=> {alert('A ocurrido el error: '+error)})
+    .then(() => {
+                  alert('Agregado correctamente');
+                  setUrl("");
+
+                })
+    .catch((error)=> {
+                        alert('A ocurrido el error: '+error)
+                        setUrl("")
+                     })
   }
 
   return (
@@ -20,7 +27,7 @@ const CreateLogo = () => {
 
       <h4>Crear logo</h4>
       <DragDropCOmponent funcion = {setUrl} name = {'Logo'} />
-      {url != "" ? writeUserData() : console.log("") }
+      {url !== "" ? writeUserData() : console.log("") }
       
     </div>
     
