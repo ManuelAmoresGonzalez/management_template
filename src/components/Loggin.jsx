@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import { useNavigate} from "react-router-dom";
-import { auth, logInWithEmailAndPassword} from "../firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
+import React, { useContext, useState } from 'react';
+import { useNavigate} from 'react-router-dom';
+import { auth, logInWithEmailAndPassword} from '../firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import '../Style/loggin.css';
-import swal from "sweetalert2";
+import swal from 'sweetalert2';
+import { types } from '../types/types';
+import { AuthContext } from '../auth/authContext';
 
 
 
@@ -11,8 +13,24 @@ const Loggin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
+  
   const navigate = useNavigate();
-            
+  const {dispatch} = useContext(AuthContext)
+  
+  const handleLogin = () => {
+
+    const action = {
+      type: types.login,
+      payload: {email: email, password: password}
+    }
+
+    dispatch(action);
+
+    navigate('/admin', {
+      replace: true
+    })
+
+  } 
 
 
   return (
@@ -30,7 +48,8 @@ const Loggin = () => {
                     showConfirmButton: false,
                     timer: 1000
                   })
-                  navigate('/admin')
+                  // navigate('/admin')
+                  handleLogin()
                 }else{
                   swal.fire(
                     'Intentalo nuevamente',
