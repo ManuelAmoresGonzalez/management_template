@@ -12,10 +12,10 @@ import { deleteDataRealtime } from '../firebaseRealTime';
 const Administration = () => {
   const navigate = useNavigate();
 
-  //Get datos de la base de datos firebase
+ // Get datos de la base de datos firebase
   // const peticion = async () => {
   //   const { data } = await axios.get(
-  //     "https://datosplantilla-46cf4-default-rtdb.firebaseio.com/carrousel.json"
+  //     "https://datosplantilla-46cf4-default-rtdb.firebaseio.com/products.json"
   //   );
   
   //   return data;
@@ -27,7 +27,7 @@ const Administration = () => {
       <h5>Configuración</h5>   
       <hr/>   
 
-      <button className="btn waves-effect waves-light col s12 m4 l2 mt-5" type="submit" name="action" onClick={() => deleteDataStorage()}> Productos
+      <button className="btn waves-effect waves-light col s12 m4 l2 mt-5" type="submit" name="action" onClick={() => navigate('/productsview') /*deleteDataStorage()*/}> Productos
         <i className="material-icons right">assessment</i>
       </button>
 
