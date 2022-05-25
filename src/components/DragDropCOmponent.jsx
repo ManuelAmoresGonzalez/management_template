@@ -5,7 +5,6 @@ import '../Style/dragdropcomponent.css'
 function DragDropCOmponent( { funcion, name } ) {  
   
   const sendFile = (e) => {
-    console.log("Este es elk nombre en el drag: "+name)
       const file= e.target.files[0];
       createFile(name, file)       
   };

@@ -36,7 +36,7 @@ const Loggin = () => {
   return (
     <div className='container'>
       <div className='row container render'>
-        <h5>Iniciar sesión</h5>
+        <h5>Acceder al sistema</h5>
         <form className='' onSubmit={ (event) => {   
               event.preventDefault();           
               logInWithEmailAndPassword( email, password).then(v => {

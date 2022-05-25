@@ -1,0 +1,46 @@
+.card{
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top:5px;
+    height: auto;
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    transition: transform 450ms;
+}
+
+/* .contenedor-card{
+    display: grid;
+    grid-column: 1;
+} */
+
+.contenedor-icons{
+    margin-left: 83%;
+    margin-bottom: 1%;
+    display: inline-block;
+}
+
+.margen{
+    margin-left: 10px;
+}
+
+.name{
+    font-size: 50px;
+    color: rgb(120, 186, 206);
+}
+
+img{
+    transition: transform 450ms;
+    max-height: 100px;    
+}
+
+img:hover{
+    transform: scale(1.8);
+    cursor: pointer;    
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+

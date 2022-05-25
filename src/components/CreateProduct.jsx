@@ -50,13 +50,16 @@ export const CreateProduct = () => {
           price,
           url,
     })
-    .then(() => {alert('Agregado correctamente')})
+    .then(() => {
+      alert('Agregado correctamente')
+      navigate('/productsview')
+    })
     .catch((error)=> {alert('A ocurrido el error: '+error)})
   }
   
   return (    
     <div className="render"> 
-      <h5>Crear un producto</h5>      
+      <h4 className='tittle'>Crear un producto</h4>      
       <DragDropCOmponent funcion = {setUrl} name = {'products/'+name} />      
       <div className='row container'>
         <form className='' onSubmit={ (event) => {   

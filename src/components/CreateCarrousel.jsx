@@ -39,11 +39,12 @@ const CreateCarrousel = () => {
 
   function writeUserData() {
     const db = getDatabase();
-    set(ref(db, 'carrousel/'+name), {             
+    set(ref(db, 'carrousel/'+name), { 
+          name,            
           url,
     })
     .then(() => {
-                  alert('Agregado correctamente')
+                  
                 })
     .catch((error)=> {
                         alert('A ocurrido el error: '+error)
@@ -53,7 +54,7 @@ const CreateCarrousel = () => {
   return (
     <div className='componentCarrousel'>
 
-      <h5>Crear carrousel</h5>
+      <h4 className='tittle'>Crear carrousel</h4>
       <DragDropCOmponent funcion = {setUrl} name = {'Carrousel'} />
       
       <div className='row container'>

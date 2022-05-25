@@ -4,3 +4,8 @@
     margin-left: 35%;
     text-align: center;
 }
+
+.positionLogout{
+    margin-left: 96%;
+    transform: translateY(-550%);
+}

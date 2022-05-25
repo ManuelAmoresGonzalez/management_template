@@ -11,7 +11,7 @@ const Register = () => {
   
   return (
     <div className='container render'>
-      <h5>Registro de usuarios</h5>
+      <h4 className='tittle'>Registro de usuarios</h4>
       <hr />
       <div className='row container'>
         <form className=''>
@@ -24,7 +24,7 @@ const Register = () => {
                      value={fullname}
                      onChange={(e) => setName(e.target.value)}
               />
-              <label for="icon_prefix">Nombre completo</label>
+              <label htmlFor="icon_prefix">Nombre completo</label>
             </div>
             <div className="input-field ">
               <i className="material-icons prefix "></i>

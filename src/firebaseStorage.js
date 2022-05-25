@@ -1,25 +1,20 @@
-import { getStorage, ref,deleteObject } from "firebase/storage";
+import { getStorage, ref, deleteObject } from "firebase/storage";
+import { storage } from "./firebase";
 import swal from "sweetalert2";
-
 
 const dbStorage = getStorage();
 
-function deleteDataStorage() {    
-    const desertRef = ref(dbStorage, 'categorie/Zapatos/IMG-20180918-WA0044.jpg');
-    deleteObject(desertRef).then(() => {
-        swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Eliminado correctamente',
-            showConfirmButton: false,
-            timer: 2000
-          })
-    }).catch((error) => {
-      console.log("El producto seleccionado no existe")
+function deleteDataStorage(url) {
+  var fileRef = storage.refFromURL(url);
+  fileRef
+    .delete()
+    .then(function () {
+      // File deleted successfully
+      console.log("File Deleted");
+    })
+    .catch(function (error) {
+      // Some Error occurred
     });
 }
 
-
-export {
-    deleteDataStorage    
-  };
+export { deleteDataStorage };

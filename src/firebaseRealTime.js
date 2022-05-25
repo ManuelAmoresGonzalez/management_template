@@ -1,11 +1,12 @@
-import { getDatabase, remove, set, ref } from "firebase/database";
+import { getDatabase, remove, ref } from "firebase/database";
 
 
 
 const dbRealtime = getDatabase();
 
-function deleteDataRealtime() {
-    remove(ref(dbRealtime, 'categories/Tennis'))
+function deleteDataRealtime(component, name) {
+    console.log("A eliminar: "+component + " "+ name)
+    remove(ref(dbRealtime, `${component}/${name}`))
 }  
 
 export {

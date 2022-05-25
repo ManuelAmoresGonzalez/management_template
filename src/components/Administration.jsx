@@ -36,21 +36,24 @@ const Administration = () => {
   // <span className='nav-item nav-link text-info'>{user.email}</span>
 
   return (
-    <div className='structure' >
-      <h5>Configuración - Bienvenido</h5>   
+
+    <div>
+      <div className='structure' >
+      
+      <h4>Configuración - Bienvenido</h4>   
       <hr/>   
 
-      <button className="btn waves-effect waves-light col s12 m4 l2 mt-5" type="submit" name="action" onClick={() => navigate('/productsview') /*deleteDataStorage()*/}> Productos
+      <button className="btn waves-effect waves-light col s12 m4 l2 mt-5" type="submit" name="action" onClick={() => navigate('/productsview') }> Productos
         <i className="material-icons right">assessment</i>
       </button>
 
-      <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/createcarrousel')}> Carrousel
+      <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/carrouselview')}> Carrousel
         <i className="material-icons right">burst_mode</i>
       </button>
 
-      <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/createlogo')}> Logo
+      {/* <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/createlogo')}> Logo
         <i className="material-icons right">folder_shared</i>
-      </button>
+      </button> */}
 
       <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/createcategory')}> Categoría
         <i className="material-icons right">library_add</i>
@@ -60,8 +63,13 @@ const Administration = () => {
       <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={handleLogout}> Logout
         <i className="material-icons right">library_add</i>
       </button>
+    </div> 
+    <a className="btn-floating btn-large waves-effect waves-light green positionLogout" ><i className="material-icons" onClick={handleLogout}>add</i></a>
 
     </div>
+
+
+    
   )
 }
 
