@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 import { getData } from "../getData";
 import { deleteDataStorage } from '../firebaseStorage';
-import { deleteDataRealtime } from '../firebaseRealTime';
+import { deleteDataRealtime, updateDataRealtime } from '../firebaseRealTime';
 
 
 import '../Style/card.css';
 
 
-const Card = ({lang,img, value, component, funcion}) => {
+const Card = ({name,img, id, description, value, component, funcion}) => {
 
 
   function deleteProduct(){  
-    deleteDataRealtime(component, lang);
+    deleteDataRealtime(component, id);
     deleteDataStorage(img);
     getData(funcion, component); 
       
@@ -22,13 +22,14 @@ const Card = ({lang,img, value, component, funcion}) => {
     <div className='card'>
         <div className='contenedor-card'>
         <img src={img} alt="lang.svg" />
-        <div className='name'>{lang}</div>
+        <div className='name'>{name}</div>
+        <div className='name'>{description}</div>
         </div>
         <div className='contenedor-icons'>
             <a className="margen btn-floating btn-Small waves-effect waves-light red"><i className="material-icons" onClick={() => deleteProduct()} >delete</i></a>
             {
               value? 
-                <a className="margen btn-floating btn-Small waves-effect waves-light blue"><i className="material-icons">sync</i></a> :
+                <a className="margen btn-floating btn-Small waves-effect waves-light blue"><i className="material-icons" onClick={() => updateDataRealtime(component, id)}>sync</i></a> :
                 null
             }
             

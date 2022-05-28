@@ -12,8 +12,6 @@ export const CreateProduct = () => {
 
   const [name, setArticleName] = useState("");
   const [price, setArticlePrice] = useState(0);
-  const [id, setArticleId] = useState("");
-  const [amount, setArticleAmount] = useState(0);  
   const [category, setArticleCategory] = useState("");
   const [description, setArticleDescription] = useState("");
   const [url, setUrl] = useState("");
@@ -59,7 +57,7 @@ export const CreateProduct = () => {
   
   return (    
     <div className="render"> 
-      <h4 className='tittle'>Crear un producto</h4>      
+      <h4 className='tittle' >Crear un producto</h4>      
       <DragDropCOmponent funcion = {setUrl} name = {'products/'+name} />      
       <div className='row container'>
         <form className='' onSubmit={ (event) => {   
@@ -99,16 +97,6 @@ export const CreateProduct = () => {
                      onChange={(e) => setArticlePrice(e.target.value)}
               />
               <label htmlFor="icon_prefix">Precio</label>
-            </div>
-
-            <div className="input-field col-md-12">
-              <input id="icon_telephone"
-                     type="number"
-                     className="validate"
-                     value={amount}
-                     onChange={(e) => setArticleAmount(e.target.value)}
-              />
-              <label htmlFor="icon_telephone">Cantidad en stock</label>
             </div>
 
 

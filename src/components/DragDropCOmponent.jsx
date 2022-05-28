@@ -28,8 +28,8 @@ function DragDropCOmponent( { funcion, name } ) {
   return (
     <div className="componentDragDrop">
         <br />
-        <div className="image-upload-wrap">
-          <h3 className="moveTittle">Arrastra la imagen que desea agregar</h3>        
+        <div className="image-upload-wrap">           
+          <h3 className="moveTittle"><i className="material-icons iconSize">file_upload</i></h3>        
           <input
             className="file-upload-input"
             type="file"

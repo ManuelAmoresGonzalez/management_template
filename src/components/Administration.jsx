@@ -55,20 +55,13 @@ const Administration = () => {
         <i className="material-icons right">folder_shared</i>
       </button> */}
 
-      <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/createcategory')}> Categoría
-        <i className="material-icons right">library_add</i>
-      </button>
-
-      
-      <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={handleLogout}> Logout
+      <button className="btn waves-effect waves-light col s12 m4 l2 mt-3" type="submit" name="action" onClick={() => navigate('/categorview')}> Categoría
         <i className="material-icons right">library_add</i>
       </button>
     </div> 
-    <a className="btn-floating btn-large waves-effect waves-light green positionLogout" ><i className="material-icons" onClick={handleLogout}>add</i></a>
+    <a className="btn-floating btn-large waves-effect waves-light green positionLogout" ><i className="material-icons" onClick={handleLogout}>exit_to_app</i></a>
 
     </div>
-
-
     
   )
 }

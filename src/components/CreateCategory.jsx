@@ -13,7 +13,8 @@ const CreateCategory = () => {
   function writeUserData() {
     //console.log(url);
     const db = getDatabase();
-    set(ref(db, 'categories/'+ name), {         
+    set(ref(db, 'categories/'+ name), { 
+          id: name,   
           name,
           url,           
     })
@@ -24,7 +25,6 @@ const CreateCategory = () => {
   return (
     <div className="render">
       <h4 className='tittle'>CreateCategory</h4>
-      {console.log("El nombre_ "+name)}
       <DragDropCOmponent funcion = {setUrl} name = {'categorie/'+name}/>      
       <div className='row container'>
         <form className=''>

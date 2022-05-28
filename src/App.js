@@ -14,6 +14,7 @@ import { AuthContext } from './auth/authContext';
 import { useEffect, useReducer } from 'react';
 import { authReducer } from './auth/authReducer';
 import { PrivateRoute } from './PrivateRoute';
+import CategoryView from './components/CategoryView';
 
 const init = () => {
   return JSON.parse(localStorage.getItem('user')) || {logged: false};
@@ -51,7 +52,13 @@ function App() {
               <CarrouselView />
             </PrivateRoute>
             } 
-            />
+          />
+          <Route exact path="/categorview" element={
+            <PrivateRoute>
+              <CategoryView />
+            </PrivateRoute>
+            } 
+          />
           <Route exact path="/admin" element={
             <PrivateRoute>
               <Administration />

@@ -21,12 +21,13 @@ const Products = ({component, value}) => {
     <div className="App">
       {data != null ? componentDidMount() : null}
       <ul>
-        { arreglo.length > 0? arreglo.map(person => {
-
+        { arreglo.length > 0? arreglo.map(article => {
           return <Card 
-          key= {person.name} 
-          lang = {person.name} 
-          img={person.url}
+          key= {article.name} 
+          name = {article.name} 
+          description = {article.price}
+          img={article.url}
+          id= {article.id}
           value={value}
           component = {component}   
           funcion= {setData}  

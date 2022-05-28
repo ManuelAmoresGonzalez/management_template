@@ -1,10 +1,16 @@
 .componentDragDrop{
   width: 80%;
   margin-left: 10%;
+  text-align: center;
 }
 
 h3{
     position: absolute;
+}
+
+.iconSize{
+  font-size: 100%;
+  opacity: 0.5;
 }
 
  .file-upload-input {
@@ -16,12 +22,10 @@ h3{
    outline: none;
    opacity: 0;
    cursor: pointer;
-   background: green;
  }
 
  .image-upload-wrap {
-   bottom: -10;
-   text-align: center;
+   bottom: -10px;
    height: 200px;
    border: 8px dashed rgba(132, 230, 157, 0.918);
    margin-left: 10px;
