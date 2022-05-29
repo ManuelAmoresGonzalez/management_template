@@ -19,12 +19,12 @@ const CreateCarrousel = () => {
 
   function setData(){
     swal.fire({
-      text: "You won't be able to revert this!",
+      text: "¿Desea agregar más imágenes?",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Agregar mas imagenes ?'
+      confirmButtonText: 'Sí'
     }).then((result) => {
       if (!result.isConfirmed) {
         swal.fire(
