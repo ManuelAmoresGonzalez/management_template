@@ -41,9 +41,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Loggin />} />
           <Route exact path="/register" element={
-            <PrivateRoute>
               <Register />
-            </PrivateRoute>
             } 
             />
           <Route exact path="/carrouselview" element={
