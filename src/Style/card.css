@@ -20,6 +20,11 @@
     display: inline-block;
 }
 
+.centerInput{
+    width: 30%;
+    left: 65%;
+}
+
 .prueba{
     background: green;
     position: fixed;

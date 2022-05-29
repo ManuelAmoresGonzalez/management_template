@@ -12,8 +12,7 @@ const UpdateProduct = ({id, name, price, description, upDate, component, modal, 
             event.preventDefault(); 
             upDate(component, id, nameArticle, priceArticle, descriptionArticle);
             modal(false);
-            getData(funcion, component); 
-            
+            getData(funcion, component);             
         }}>
                 <label htmlFor="">Nombre del articulo</label>
                 <input id=" "
@@ -43,7 +42,7 @@ const UpdateProduct = ({id, name, price, description, upDate, component, modal, 
                      onChange={(e) => setPrice(e.target.value)}
                 />
 
-            <button>Button</button>
+            <button>Actualizar</button>
                 
         </form>    
     </div>

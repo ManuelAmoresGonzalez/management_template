@@ -7,6 +7,7 @@ function getData(setData, component){
       )
       .then((res) => {
         setData(res.data);
+        setData(res.data)
       });
 }
 
