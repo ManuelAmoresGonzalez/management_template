@@ -3,7 +3,6 @@ import Loggin from './components/Loggin';
 import Register from './components/Register';
 import Administration from './components/Administration';
 import CreateCarrousel from './components/CreateCarrousel';
-import Card from './components/Card';
 import CarrouselView from './components/CarrouselView';
 import CreateCategory from './components/CreateCategory';
 import CreateLogo from './components/CreateLogo';

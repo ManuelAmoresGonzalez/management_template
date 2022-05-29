@@ -4,6 +4,7 @@ import { getDatabase, ref, set } from "firebase/database";
 import Select from 'react-select'
 import axios from 'axios';
 import DragDropCOmponent from "./DragDropCOmponent";
+import { setLogLevel } from "firebase/app";
 
 export const CreateProduct = () => {
 
@@ -28,7 +29,7 @@ export const CreateProduct = () => {
     );
     let cont= 0;
     for (const [clave, valor] of Object.entries(data)) {
-      let setData = {value: clave, label: clave};
+      let setData = {value: valor.id, label: valor.name};
       mySet[cont] = setData;    
       cont++;  
     }    
@@ -57,7 +58,8 @@ export const CreateProduct = () => {
   
   return (    
     <div className="render"> 
-      <h4 className='tittle' >Crear un producto</h4>      
+      <h4 className='tittle' >Crear un producto</h4>   
+      
       <DragDropCOmponent funcion = {setUrl} name = {'products/'+name} />      
       <div className='row container'>
         <form className='' onSubmit={ (event) => {   
@@ -75,7 +77,7 @@ export const CreateProduct = () => {
                     }                     
               />
               
-            <label htmlFor="icon_prefix">Nombre del articulo</label>
+              <label htmlFor="icon_prefix">Nombre del articulo</label>
             </div>
 
 

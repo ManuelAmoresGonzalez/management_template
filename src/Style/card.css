@@ -20,6 +20,13 @@
     display: inline-block;
 }
 
+.prueba{
+    background: green;
+    position: fixed;
+    width: 80%;
+    height: 200px;
+}
+
 .margen{
     margin-left: 10px;
 }
@@ -27,6 +34,12 @@
 .name{
     font-size: 50px;
     color: rgb(120, 186, 206);
+}
+
+.modalUpdate{
+    background: red;
+    width: 10%;
+
 }
 
 img{

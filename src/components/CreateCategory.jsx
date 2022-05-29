@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getDatabase, ref, set, remove } from "firebase/database";
+import { getDatabase, ref, set} from "firebase/database";
 import DragDropCOmponent from "./DragDropCOmponent";
 
 const CreateCategory = () => {

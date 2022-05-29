@@ -9,16 +9,30 @@ function deleteDataRealtime(component, id) {
     remove(ref(dbRealtime, `${component}/${id}`))
 }  
 
-function updateDataRealtime(component, id) {
+function updateDataRealtime(component, id, nameArticle, priceArticle, descriptionArticle) {
     const db = getDatabase();
-    update(ref(db, `${component}/${id}` ), {   
-        description: "Holis",
-    })
-    .then(() => {
-      alert('Actualizado correctamente')
-      //navigate('/productsview')
-    })
-    .catch((error)=> {alert('A ocurrido el error: '+error)})
+    if(priceArticle !== undefined){
+        update(ref(db, `${component}/${id}` ), {  
+            description: descriptionArticle,
+            name: nameArticle,
+            price: priceArticle,        
+        })
+        .then(() => {
+          alert('Actualizado correctamente')
+          //navigate('/productsview')
+        })
+        .catch((error)=> {alert('A ocurrido el error: '+error)})
+    }else{
+        update(ref(db, `${component}/${id}` ), {  
+            name: nameArticle,      
+        })
+        .then(() => {
+          alert('Actualizado correctamente')
+          //navigate('/productsview')
+        })
+        .catch((error)=> {alert('A ocurrido el error: '+error)})
+    }
+    
   
 }  
 

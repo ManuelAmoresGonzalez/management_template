@@ -7,6 +7,7 @@ import { deleteDataStorage } from '../firebaseStorage';
 import { deleteDataRealtime } from '../firebaseRealTime';
 import { AuthContext } from '../auth/authContext';
 import { types } from '../types/types';
+import Prueba from './Prueba';
 
 
 
@@ -60,7 +61,7 @@ const Administration = () => {
       </button>
     </div> 
     <a className="btn-floating btn-large waves-effect waves-light green positionLogout" ><i className="material-icons" onClick={handleLogout}>exit_to_app</i></a>
-
+    
     </div>
     
   )

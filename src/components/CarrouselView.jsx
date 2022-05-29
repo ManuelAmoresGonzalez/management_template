@@ -15,7 +15,7 @@ const CarrouselView = () => {
       </div>
 
       <Products component = {'carrousel'}
-                value = {false}
+                value = {true}
        />     
     </div>
   )
