@@ -28,6 +28,11 @@
   color: #61dafb;
 }
 
+/* .buttonBack{
+  margin-left: 16%;
+  transform: translate(0,-144px)
+} */
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

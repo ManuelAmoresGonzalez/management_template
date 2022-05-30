@@ -12,6 +12,7 @@ const CarrouselView = () => {
       <div className='boxtittle'>
       <h4 className='tittle'>Imagenes del Carrousel</h4>
       <a className="btn-floating btn-large waves-effect waves-light green" ><i className="material-icons" onClick={() => navigate('/createcarrousel')}>add</i></a>
+      <a className="btn-floating btn-large waves-effect waves-light red buttonBackCarrouselView" ><i className="material-icons" onClick={() => navigate('/admin')}>3d_rotation</i></a> 
       </div>
 
       <Products component = {'carrousel'}

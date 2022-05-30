@@ -86,10 +86,10 @@ const CreateCarrousel = () => {
 
           <hr />
         </form>
-
+                 
 
       </div>
-            
+      <a className="btn-floating btn-large waves-effect waves-light green buttonBackCarrousel" ><i className="material-icons" onClick={() => navigate('/admin')}>add</i></a>      
       
     </div>
   )
