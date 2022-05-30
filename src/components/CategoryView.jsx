@@ -14,6 +14,7 @@ const CategoryView = () => {
       <div className='boxtittle'>
       <h4 className='tittle'>Catalogo de categorías</h4>
       <a className="btn-floating btn-large waves-effect waves-light green" ><i className="material-icons" onClick={() => navigate('/createcategory')}>add</i></a>
+      <a className="btn-floating btn-large waves-effect waves-light grey buttonBackCategoryView" ><i className="material-icons" onClick={() => navigate('/admin')}>arrow_back</i></a> 
       </div>
 
       <Products component = {'categories'}

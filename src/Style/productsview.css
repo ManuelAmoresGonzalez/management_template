@@ -16,3 +16,16 @@
     font-size: 80px;
     font-variant: small-caps;
 }
+
+.buttonBackCarrouselView{
+  margin-left: 15%;
+  transform: translate(0,-135px)
+} 
+.buttonBackCategoryView{
+    margin-left: 15%;
+    transform: translate(0,-135px)
+} 
+.buttonBackProductsView{
+    margin-left: 15%;
+    transform: translate(0,-135px)
+} 

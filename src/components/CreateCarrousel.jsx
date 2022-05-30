@@ -56,6 +56,7 @@ const CreateCarrousel = () => {
     <div className='componentCarrousel'>
 
       <h4 className='tittle'>Crear carrousel</h4>
+      <a className="btn-floating btn-large waves-effect waves-light grey buttonBackCreate" ><i className="material-icons" onClick={() => navigate('/carrouselview')}>arrow_back</i></a> 
       <DragDropCOmponent funcion = {setUrl} name = {'Carrousel'} />
       
       <div className='row container'>
@@ -81,7 +82,7 @@ const CreateCarrousel = () => {
 
           </div>
           { <button className='waves-effect waves-light btn mt-2 z-index-0' type='submit' >Crear nueva imagen
-            
+        
             </button> }
 
           <hr />
@@ -89,7 +90,6 @@ const CreateCarrousel = () => {
                  
 
       </div>
-      <a className="btn-floating btn-large waves-effect waves-light green buttonBackCarrousel" ><i className="material-icons" onClick={() => navigate('/admin')}>add</i></a>      
       
     </div>
   )

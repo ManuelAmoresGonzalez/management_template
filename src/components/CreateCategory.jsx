@@ -25,6 +25,7 @@ const CreateCategory = () => {
   return (
     <div className="render">
       <h4 className='tittle'>CreateCategory</h4>
+      <a className="btn-floating btn-large waves-effect waves-light grey buttonBackCreate" ><i className="material-icons" onClick={() => navigate('/categorview')}>arrow_back</i></a> 
       <DragDropCOmponent funcion = {setUrl} name = {'categorie/'+name}/>      
       <div className='row container'>
         <form className=''>

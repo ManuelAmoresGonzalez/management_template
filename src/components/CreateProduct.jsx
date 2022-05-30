@@ -59,7 +59,7 @@ export const CreateProduct = () => {
   return (    
     <div className="render"> 
       <h4 className='tittle' >Crear un producto</h4>   
-      
+      <a className="btn-floating btn-large waves-effect waves-light grey buttonBackCreate" ><i className="material-icons" onClick={() => navigate('/productsview')}>arrow_back</i></a> 
       <DragDropCOmponent funcion = {setUrl} name = {'products/'+name} />      
       <div className='row container'>
         <form className='' onSubmit={ (event) => {   
