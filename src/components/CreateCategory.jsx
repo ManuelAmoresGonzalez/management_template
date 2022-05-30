@@ -46,8 +46,7 @@ const CreateCategory = () => {
 
           </div>
           { <button className='waves-effect waves-light btn mt-2 z-index-0' type='submit' onClick={() => {
-              writeUserData()
-              navigate('/admin')}}>Crear nueva categoría
+              writeUserData()}}>Crear nueva categoría
             
             </button> }
 

@@ -10,7 +10,7 @@
 }
 
 .tittle{
-    margin-left: 20%;
+    margin-left: 5%;
     color: rgb(120, 186, 206);
     margin-bottom: 2%;
     font-size: 80px;
@@ -18,14 +18,14 @@
 }
 
 .buttonBackCarrouselView{
-  margin-left: 15%;
+  margin-left: 10%;
   transform: translate(0,-135px)
 } 
 .buttonBackCategoryView{
-    margin-left: 15%;
+    margin-left: 10%;
     transform: translate(0,-135px)
 } 
 .buttonBackProductsView{
-    margin-left: 15%;
+    margin-left: 10%;
     transform: translate(0,-135px)
 } 

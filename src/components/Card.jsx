@@ -42,12 +42,11 @@ const Card = ({name,description, price, img, id, value, component, funcion}) => 
   
 
 
-  return (
-
+  return (    
     <tr>
-        <td><img src={img} alt="" className="circle responsive-img"/></td>
+        <td><img src={img} alt="" className="circle responsive-img"/></td>        
         <td>{name}</td>
-        <td>{price}</td>
+        <td>₡{price}</td>
         <td>{description}</td>
         <td>
           <a className="margen btn-floating btn-Small waves-effect waves-light red"><i className="material-icons" onClick={() => deleteProduct()} >delete</i></a>
@@ -60,7 +59,7 @@ const Card = ({name,description, price, img, id, value, component, funcion}) => 
         {
           modal ? <Description />: null
         } 
-      </tr>
+      </tr>      
   )
 }
 export default Card

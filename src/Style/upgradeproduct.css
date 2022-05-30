@@ -2,10 +2,20 @@
     background: rgb(90, 203, 231);
     width: 60%;
     left: 20%;
-    height: 300px;
+    height: auto;
     position: fixed;
     z-index: 10;
     bottom: 30%;
-    opacity: 0.8;
     color: black;
+    box-shadow: 0px 2px 19px 6px rgba(0,0,0,0.28);
+    border-radius: 2%;    
+    padding: 3%;
 }
+
+/* .styleForm{
+    margin: 4%;
+}
+
+.styleButton{
+    margin-bottom: 2%;
+} */

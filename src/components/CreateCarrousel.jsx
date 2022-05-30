@@ -32,7 +32,7 @@ const CreateCarrousel = () => {
           '',
           'success'
         )
-        navigate('/admin')
+        navigate('/carrouselview')
       }
     })
   }
