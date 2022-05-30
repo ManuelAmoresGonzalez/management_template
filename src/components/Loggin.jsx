@@ -82,7 +82,7 @@ const Loggin = () => {
             </div>
 
           </div>
-          { <button className='waves-effect waves-light btn' type='submit' >Enviar</button> }
+          { <button className='waves-effect waves-light btn' type='submit' >Iniciar Sesión</button> }
 
           <hr />
           <h6>Aún no te registras ?</h6>
